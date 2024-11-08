@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Repair Request Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Crowd Sourced Road Repair Portal</h1>
+            <p>Report road damages, track repair status, and help maintain safer infrastructure.</p>
+            <button onclick="redirectToReportPage()">Report Issue</button>
+        </div>
+    </header>
+
+    <!-- Map Section -->
+    <section id="mapSection">
+        <h2>Reported Issues Map</h2>
+        <div id="map"></div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Road Repair Request Portal. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([51.505, -0.09], 13); // Initial coordinates (London)
+
+        // Set the tile layer (map style)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to redirect to report page when "Report Issue" button is clicked
+        function redirectToReportPage() {
+            // Open a new page for reporting issue
+            window.location.href = 'report-issue.html'; // Redirect to the new report issue page
+        }
+    </script>
+</body>
+</html>
