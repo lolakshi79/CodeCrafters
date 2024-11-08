@@ -1,0 +1,9 @@
+document.getElementById('reportForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    console.log('Form data submitted:', formData);
+
+    // Redirect to success page after submission
+    window.location.href = 'success.html';
+});

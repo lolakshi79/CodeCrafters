@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Road Issue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Report a Road Issue</h1>
+            <p>Please provide the details of the issue you want to report.</p>
+            <a href="index.html"><button>Back to Map</button></a>
+        </div>
+    </header>
+
+    <!-- Reporting Form Section -->
+    <section id="reportFormSection">
+        <form id="reportForm">
+            <h2>Report an Issue</h2>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="description">Issue Description:</label>
+            <textarea id="description" placeholder="Describe the road issue" required></textarea>
+
+            <label for="severity">Severity Level:</label>
+            <select id="severity">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter location or selected map location" required>
+
+            <label for="status">Repair Status:</label>
+            <select id="status">
+                <option value="pending">Pending</option>
+                <option value="inProgress">In Progress</option>
+                <option value="resolved">Resolved</option>
+            </select>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Road Repair Request Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
